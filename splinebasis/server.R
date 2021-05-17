@@ -14,6 +14,12 @@ library(ggplot2)
 shinyServer(function(input, output) {
 
     output$knotPlot <- renderPlot({
+        
+        rk <- function( x, z ) {
+            ((z-0.5)^2-1/12)*((x-0.5)^2-1/12)/4-((abs(x-z)-0.5)^4-(abs(x-z)-0.5)^2/2+7/240)/24
+        }
+        # Reszpekt to https://tamas-ferenci.github.io/FerenciTamas_SimitasSplineRegresszioAdditivModellek/index.html 
+        
 
         d <- data.frame( x= seq(0,1, length.out = 100))
         d$ra <- rep( 0, 100)
@@ -86,6 +92,13 @@ shinyServer(function(input, output) {
     })
     
     output$bftable <- renderTable({
+        
+        rk <- function( x, z ) {
+            ((z-0.5)^2-1/12)*((x-0.5)^2-1/12)/4-((abs(x-z)-0.5)^4-(abs(x-z)-0.5)^2/2+7/240)/24
+        }
+        # Reszpekt to https://tamas-ferenci.github.io/FerenciTamas_SimitasSplineRegresszioAdditivModellek/index.html 
+        
+        
         d <- data.frame( x= seq(0,1, length.out = 100))
         d$ra <- rep( 0, 100)
         d$rb <- rep( 0, 100)
