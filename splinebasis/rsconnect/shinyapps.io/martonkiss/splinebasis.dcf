@@ -5,9 +5,9 @@ account: martonkiss
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4143197
-bundleId: 4607578
+bundleId: 4607596
 url: https://martonkiss.shinyapps.io/splinebasis/
-when: 1621260855.70539
-lastSyncTime: 1621260855.70539
+when: 1621261165.15605
+lastSyncTime: 1621261165.15605
 asMultiple: FALSE
 asStatic: FALSE
